@@ -1,0 +1,63 @@
+Pass by Value:
+
+In Python, immutable objects (like int, str, tuple, etc.) behave as if they are passed by value.
+This means a copy of the value is passed to the function, so changes inside the function do not affect the original variable.
+
+Pass by Reference:
+
+In Python, mutable objects (like list, dict, set, etc.) behave as if they are passed by reference.
+This means the reference (address) of the object is passed to the function, so modifications inside the function affect the original object.
+
+Note:
+Technically, Python uses “pass-by-object-reference” (also called “call-by-sharing”).
+Both mutable and immutable objects are passed by reference, but the behavior differs depending on whether the object can be changed (mutable) or not (immutable).
+
+
+
+-------------
+
+Time Complexity
+
+Definition: Measures how the execution time of an algorithm changes with input size.
+
+It does not depend on the machine’s speed but on how the number of operations grows with input.
+
+Represented using Big O notation (e.g., O(N), O(N²)).
+
+Rules for Finding Time Complexity
+
+Consider the worst case — when the code takes the longest time.
+
+Ignore constants — e.g., O(3N + 5) → O(N).
+
+Ignore lower-order terms — e.g., O(N³ + N²) → O(N³).
+
+Examples
+
+Nested loops (each runs N times) → O(N²).
+
+Inner loop runs i times for each i → O(N²) (from summation 1+2+...+N).
+
+Space Complexity
+
+Definition: Measures how much memory an algorithm uses during execution.
+
+Represented as Big O, combining:
+
+Input space: memory for inputs.
+
+Auxiliary space: extra memory used to solve the problem.
+
+Examples
+
+Simple variables → O(1)
+
+Array of size N → O(N)
+
+Good practice: Avoid modifying input variables to reduce space — maintain data integrity unless allowed by the interviewer.
+
+In Competitive Programming
+
+Online judges execute roughly 10⁸ operations per second.
+
+To complete within 1 second, aim for algorithms around O(10⁸) operations or less.
