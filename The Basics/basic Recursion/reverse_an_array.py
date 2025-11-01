@@ -1,3 +1,8 @@
+#optimal
+def reverse(lis):
+    for i in range(0,len(lis)//2,1):
+        lis[i], lis[len(lis)-1-i] = lis[len(lis)-1-i], lis[i]
+    return lis
 
 #Brute force
 def reverselis(lis):
@@ -8,4 +13,6 @@ def reverselis(lis):
 
 lis = list(map(int,input("Enter all element: ").split(" ")))
 print(f"Original list: {lis}")
+
+print(f"Reversed list: {reverse(lis)}")
 print(f"Reversed list: {reverselis(lis)}")
